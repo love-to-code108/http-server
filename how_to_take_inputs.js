@@ -4,9 +4,9 @@ const port = 5173;
 
 app.get("/",(req,res) => {
     const n = req.query.n;
-    console.log(res)
-    res.send(req.toString());
-    // res.send(n.toString());
+    console.log(req.header);
+    // res.send(req.toString());
+    res.send("Hello world");
 })
 
 app.listen(port , () => {
